@@ -1,0 +1,26 @@
+<ion-content fullscreen="true" >
+<ion-card>
+
+  <ion-toolbar color="primary">
+    <ion-title>
+      Vos Cammandes    </ion-title>
+  </ion-toolbar>
+
+  <ion-card-content *ngFor="let item of commande" >
+  Prix totale:{{item.prix}}£ <br>
+    Date:{{item.date| date: 'dd/MM/yyyy'}}<br>
+    <div class="col-sm-4 py-2">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let i of item.produit">nom:{{i.id}} nbr: {{i.quantite}}</li>
+
+      </ul>
+    </div>
+    <span class="badge bg-success" style="color: green" *ngIf="item.payer===true" >En Ligne</span>
+    <span class="badge bg-danger" style="color: red" *ngIf="!item.payer" >a la livrason</span>
+    <ion-icon name="trash-outline" style="color: red;margin-left: 90%;margin-top: 0%" (click)="supprimer(item._id)"></ion-icon>
+
+    <hr>
+  </ion-card-content>
+
+</ion-card>
+</ion-content>

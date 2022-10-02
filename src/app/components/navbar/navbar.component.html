@@ -1,0 +1,27 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab()">
+
+  <ion-tab-bar slot="bottom" color="tertiary">
+
+    <ion-tab-button tab="acc" >
+      <ion-icon [name]="selectedTab === 'home' ? 'home' : 'home-outline'"></ion-icon>
+      <ion-label>Accueil</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile" >
+      <ion-icon [name]="selectedTab === 'profil' ? 'person' : 'person-outline'"></ion-icon>
+      <ion-label>Profil</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="panier"  >
+      <ion-icon [name]="selectedTab === 'panier' ? 'cart' : 'cart-outline'" ></ion-icon>
+      <ion-label >Panier</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="commande">
+      <ion-icon  [name]="selectedTab === 'planing' ? 'bag' : 'bag-outline'"></ion-icon>
+      <ion-label>Commande</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="logout()"  >
+      <ion-icon [name]="selectedTab === 'logout' ? 'log-out' : 'log-out-outline'"></ion-icon>
+      <ion-label>logout</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

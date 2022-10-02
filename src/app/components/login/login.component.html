@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <div id="bg">
+
+  </div>
+  <ion-list lines="full">
+    <ion-item-group class="ion-margin-horizontal">
+      <form [formGroup]="form1">
+
+        <div class="ion-margin-vertical">
+          <ion-item>
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input formControlName="email" type="email" placeholder="Entrer votre Email">
+              <ion-icon name="mail" slot="start" color="medium"></ion-icon>
+            </ion-input>
+          </ion-item>
+          <ion-text class="error" color="danger"
+                    *ngIf="!form1.get('email').valid && form1.get('email').touched">
+            <ion-text *ngIf="form1.get('email').hasError('required')">
+              * Entrer email s'il vous plait !
+            </ion-text>
+            <ion-text
+              *ngIf="!form1.get('email').hasError('required') && form1.get('email').hasError('mail')">
+              * Entrer votre email s'il vous plait !
+            </ion-text>
+          </ion-text>
+        </div>
+
+        <div class="ion-margin-vertical">
+          <ion-item>
+            <ion-label position="stacked">Mot de passe</ion-label>
+            <ion-input formControlName="motPasse" type="password" placeholder="Mot de passe">
+              <ion-icon name="key" slot="start" color="medium"></ion-icon>
+            </ion-input>
+          </ion-item>
+          <ion-text class="error" color="danger" *ngIf="!form1.get('motPasse').valid && form1.get('motPasse').touched">
+            <ion-text *ngIf="form1.get('motPasse').hasError('required')">
+              * Entrer votre mot de passe s'il vous plait !
+            </ion-text>
+            <ion-text *ngIf="!form1.get('motPasse').hasError('required') && form1.get('motPasse').hasError('minlength')">
+              * 8 caractére au minimum
+            </ion-text>
+          </ion-text>
+        </div>
+
+        <ion-button size="large" expand="block" shape="round" color="primary" (click)="onSubmit()" >
+          <ion-text >Connecter</ion-text>
+        </ion-button>
+        <ion-text >
+    vous n'avez un compte?<a (click)="go()">cliquez ici</a>
+        </ion-text>
+      </form>
+    </ion-item-group>
+
+  </ion-list>
+</ion-content>
