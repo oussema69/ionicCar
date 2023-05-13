@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+<ion-card *ngFor="let rec of recs"  class="my-card">
+  <ion-card-header>
+    <ion-card-title>Reclamation numero:{{ rec.id }}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content style="margin-left:15%">
+    <span *ngIf="rec.repartition === 1" class="text-green">Repartition</span><tr>
+    <span *ngIf="rec.desinstallation === 1" class="text-green">Desinstallation</span><tr>
+    <span *ngIf="rec.reinstallation === 1" class="text-green">Reinstallation</span><tr>
+    <span *ngIf="rec.nouvelinstallation === 1" class="text-green">Nouvelinstallation</span><tr>
+    <span *ngIf="rec.option === 1" class="text-green">Option</span><tr>
+    <span *ngIf="rec.sim === 1" class="text-green">Sim</span><tr>
+      <span  [ngClass]="{'text-blue': rec.isValid === 1, 'text-red': rec.isValid === 0}">
+        {{ rec.isValid === 1 ? 'traité' : 'non traité' }}
+      </span>
+
+  </ion-card-content>
+
+
+
+  <ion-button fill="clear"  (click)="goIntervention(rec.id)">Editer</ion-button>
+
+</ion-card>
+</ion-content>
+

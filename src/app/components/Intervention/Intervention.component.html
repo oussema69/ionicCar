@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <span *ngIf="inters?.length===0">aucune intervention</span>
+  <ion-card *ngFor="let rec of inters"  class="my-card">
+    <ion-card-header>
+      <ion-card-title>Reclamation numero:{{ rec.reclamation_id }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content >
+
+      <span>Date:{{ rec.created_at | date: 'dd/MM/yyyy' }}</span>
+
+    </ion-card-content>
+
+
+
+    <ion-button fill="clear"  (click)="gotache(rec.id)">Consulter</ion-button>
+
+  </ion-card>
+
+  </ion-content>

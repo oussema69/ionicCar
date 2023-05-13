@@ -28,15 +28,15 @@
         <div class="ion-margin-vertical">
           <ion-item>
             <ion-label position="stacked">Mot de passe</ion-label>
-            <ion-input formControlName="motPasse" type="password" placeholder="Mot de passe">
+            <ion-input formControlName="password" type="password" placeholder="Mot de passe">
               <ion-icon name="key" slot="start" color="medium"></ion-icon>
             </ion-input>
           </ion-item>
-          <ion-text class="error" color="danger" *ngIf="!form1.get('motPasse').valid && form1.get('motPasse').touched">
-            <ion-text *ngIf="form1.get('motPasse').hasError('required')">
+          <ion-text class="error" color="danger" *ngIf="!form1.get('password').valid && form1.get('password').touched">
+            <ion-text *ngIf="form1.get('password').hasError('required')">
               * Entrer votre mot de passe s'il vous plait !
             </ion-text>
-            <ion-text *ngIf="!form1.get('motPasse').hasError('required') && form1.get('motPasse').hasError('minlength')">
+            <ion-text *ngIf="!form1.get('password').hasError('required') && form1.get('password').hasError('minlength')">
               * 8 caractére au minimum
             </ion-text>
           </ion-text>
@@ -45,9 +45,7 @@
         <ion-button size="large" expand="block" shape="round" color="primary" (click)="onSubmit()" >
           <ion-text >Connecter</ion-text>
         </ion-button>
-        <ion-text >
-    vous n'avez un compte?<a (click)="go()">cliquez ici</a>
-        </ion-text>
+
       </form>
     </ion-item-group>
 

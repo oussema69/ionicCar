@@ -34,8 +34,8 @@ export class LoginComponent implements OnInit {
       email: new FormControl('',
         {validators: [Validators.required, Validators.email]}
       ),
-      motPasse: new FormControl('',
-        {validators: [Validators.required, Validators.minLength(8)]}
+      password: new FormControl('',
+        {validators: [Validators.required, Validators.minLength(4)]}
       ),
     });
   }
@@ -49,16 +49,9 @@ export class LoginComponent implements OnInit {
       this.form1.markAllAsTouched();
     }
     this.authservice.login(this.form1.value).subscribe((res: any)=>{
-        localStorage.setItem('dhiamelliti', res.token);
-        const token = localStorage.getItem('dhiamelliti');
-
-        if(token) {
-          const decoded = jwt_decode(token);
-
-          this.user=decoded;
-        }
-
-          this.router.navigate(['/home/acc']);
+        localStorage.setItem('id', res.user.id);
+        console.log('ttt',res.user.id)
+          this.router.navigate(['/home/rec']);
 
 
 

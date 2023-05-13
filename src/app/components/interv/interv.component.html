@@ -1,0 +1,160 @@
+<span>aucune intervention</span>
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+
+  <ion-toolbar color="tertiary">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button expand="block" color="tertiary" (click)="goInter()">Interventions</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" color="tertiary" (click)="goDiag()">Diagnostics</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" color="tertiary" (click)="goOption()">Options</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+</ion-header>
+<h1 class="center">Interventions</h1>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>ALIMENTATION</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Branchement Fiche d'Alimentation</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Alimentation', 'Branchement Fiche dAlimentation')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Changement Régulateur</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Alimentation', 'Changement Régulateur')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Plombage</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Alimentation', 'Plombage')"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+</ion-card>
+<!---->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>GPS</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Branchement Antenne</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GPS', 'Branchement Antenne')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Changement Antenne </ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GPS', 'Changement Antenne')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cahngement Connecteur</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GPS', 'Cahngement Connecteur')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Changement Posistion Antenne</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GPS', 'Changement Posistion Antenne')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Repartition Modem</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GPS', 'Repartition Modem')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Changement Boitier</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GPS', 'Changement Boitier')"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+</ion-card>
+<!---->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>GSM</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Branchement Antenne</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GSM', 'Branchement Antenne')" ></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Changement Antenne</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GSM', 'Changement Antenne')"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Repartition Modem</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GSM', 'Repartition Modem')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Changement Boitier</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'GSM', 'Changement Boitier')"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+</ion-card>
+<!---->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>SIM</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Changement Sim</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'SIM', 'Changement Sim')"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Changement Support Sim</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'SIM', 'Changement Support Sim')"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+  </ion-card-content>
+
+</ion-card>
+<!---->
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Configuration & Mise en marche</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Changement paramétres</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Configuration & Mise en marche', 'Changement paramétres')"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mise A Jour Firemware</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Configuration & Mise en marche', 'Mise A Jour Firemware')" ></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Test Connectivité</ion-label>
+        <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Configuration & Mise en marche', 'Test Connectivité')"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+</ion-card>
+<ion-button (click)="onSubmit()" class="btncenter">envoyer</ion-button>
+
+
+</ion-content>

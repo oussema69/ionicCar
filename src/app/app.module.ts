@@ -8,25 +8,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HomeComponent} from "./components/home/home.component";
 import {NavbarComponent} from "./components/navbar/navbar.component";
-import {AccueilComponent} from "./components/accueil/accueil.component";
-import {CommandeComponent} from "./components/commande/commande.component";
-import {PanierComponent} from "./components/panier/panier.component";
-import {ProfileComponent} from "./components/profile/profile.component";
+
 import {LoginComponent} from "./components/login/login.component";
-import {RegistreComponent} from "./components/registre/registre.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HeadersComponent} from "./components/headers/headers.component";
-import { CatPipe } from './pipes/cat.pipe';
-import {ArticleComponent} from "./components/article/article.component";
-import { ArticlePipe } from './pipes/article.pipe';
-import {PanComponent} from "./components/pan/pan.component";
+import { ReclamationComponent } from './components/reclamation/reclamation.component';
+import { InterventionComponent } from './components/Intervention/Intervention.component';
+import { AddInterComponent } from './components/addInter/addInter.component';
+import { DiagnosticComponent } from './components/diagnostic/diagnostic.component';
+import { IntervComponent } from './components/interv/interv.component';
+import { OptionComponent } from './components/option/option.component';
+import { TacheComponent } from './components/tache/tache.component';
 
 @NgModule({
   declarations: [AppComponent,
     HomeComponent, NavbarComponent,
-    AccueilComponent, CommandeComponent,
-    PanierComponent, ProfileComponent, LoginComponent,
-    RegistreComponent, HeadersComponent, CatPipe,ArticleComponent, ArticlePipe,ArticleComponent,PanierComponent,PanComponent
+     LoginComponent,
+     HeadersComponent,
+    ReclamationComponent,
+    InterventionComponent,
+    AddInterComponent,
+    OptionComponent,
+    DiagnosticComponent,
+    IntervComponent,
+    TacheComponent
   ],
     imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
       ReactiveFormsModule, FormsModule

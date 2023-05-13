@@ -1,0 +1,179 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button expand="block" color="tertiary" (click)="goInter()">Interventions</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" color="tertiary" (click)="goDiag()">Diagnostics</ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button expand="block" color="tertiary" (click)="goOption()">Options</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h1 class="center">Options</h1>
+
+  <ion-header [translucent]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Anti Démarrage</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Installation</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Anti Démarrage', 'Installation')"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Repartition</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Anti Démarrage', 'Repartition')"></ion-checkbox>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+  <!---->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Can</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Installation</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Can', 'Installation')"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Repartition</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Can', 'Repartition')" ></ion-checkbox>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+  <!---->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sonede Temp</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Installation</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Sonede Temp', 'Installation')"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Repartition</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Sonede Temp', 'Repartition')"></ion-checkbox>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+    <!---->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Batterie</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Installation</ion-label>
+            <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Batterie', 'Installation')"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>Repartition</ion-label>
+            <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Batterie', 'Repartition')"></ion-checkbox>
+          </ion-item>
+
+        </ion-list>
+      </ion-card-content>
+
+    </ion-card>
+      <!---->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Carburant</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Installation</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Carburant', 'Installation')"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Repartition</ion-label>
+          <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Carburant', 'Repartition')"></ion-checkbox>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+    <!---->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Badge+Lecteur</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label>Installation</ion-label>
+            <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Badge+Lecteur', 'Installation')"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>Repartition</ion-label>
+            <ion-checkbox slot="end" (ionChange)="onCheckboxChange($event,'Badge+Lecteur', 'Repartition')"></ion-checkbox>
+          </ion-item>
+
+        </ion-list>
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Autre</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-textarea label="Regular textarea" placeholder="Ecrire Ici" [(ngModel)]="autre"></ion-textarea>
+        </ion-item>
+      </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Element De Facturation</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-textarea label="Regular textarea" placeholder="Ecrire Ici" [(ngModel)]="el"></ion-textarea>
+        </ion-item>
+      </ion-card-content>
+
+    </ion-card>
+    <ion-button (click)="onSubmit()" class="btncenter">envoyer</ion-button>
+
+
+
+
+
+

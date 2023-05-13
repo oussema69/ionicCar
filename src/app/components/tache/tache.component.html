@@ -1,0 +1,146 @@
+<ion-content [fullscreen]="true">
+  <ion-card class="my-card">
+    <ion-card-header>
+      <ion-card-title>Interventions</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list>
+        alimentation
+        <ion-item *ngFor="let inter of alimentation">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        GSM
+        <ion-item *ngFor="let inter of gsm">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        GPS
+        <ion-item *ngFor="let inter of gps">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        SIM
+        <ion-item *ngFor="let inter of sim">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        Configuration & Mise en marche
+        <ion-item *ngFor="let inter of conf">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="my-card">
+    <ion-card-header>
+      <ion-card-title>Diagnostics</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-list>
+        alimentation
+        <ion-item *ngFor="let inter of Diagalimentation">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        GSM
+        <ion-item *ngFor="let inter of Diaggsm">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        GPS
+        <ion-item *ngFor="let inter of Diaggps">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        SIM
+        <ion-item *ngFor="let inter of Diagsim">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        Configuration & Mise en marche
+        <ion-item *ngFor="let inter of Diagconf">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="my-card">
+    <ion-card-header>
+      <ion-card-title>Options</ion-card-title>
+    </ion-card-header>
+
+
+
+    <ion-card-content>
+
+      <ion-list>
+        Anti Démarrage
+        <ion-item *ngFor="let inter of anti">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        Can
+        <ion-item *ngFor="let inter of can">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+
+
+
+      <ion-list>
+        Sonede Temp
+        <ion-item *ngFor="let inter of sonede">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        Batterie
+        <ion-item *ngFor="let inter of bat">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        Carburant
+        <ion-item *ngFor="let inter of car">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+        Badge+Lecteur
+        <ion-item *ngFor="let inter of badge">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        Autre
+        <ion-item *ngFor="let inter of autre">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        Element De Facturation
+        <ion-item *ngFor="let inter of el">
+          <ion-text>{{ inter.value }}</ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

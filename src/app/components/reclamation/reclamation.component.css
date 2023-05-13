@@ -1,0 +1,14 @@
+.my-card {
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}
+.text-green {
+  color: rgb(86, 8, 230);
+}
+
+.text-red {
+  color: red;
+}
+.text-blue {
+  color: rgb(60, 248, 85);
+}
